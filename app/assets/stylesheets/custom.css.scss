@@ -1,0 +1,20 @@
+
+@import 'bootstrap/dist/css/bootstrap';
+
+h1 {
+color: rgb(43, 110, 37);
+}
+#logo {
+  color: red;
+}
+.jumbotron {
+  background-size: contain;
+  background-position: right top;
+  background-image: url("https://github.com/helenxfu/helenxfu.github.io/blob/master/assets/index-banner/skillset-art.png");
+  
+}
+footer {
+  background-color: rgb(194, 194, 194);
+  margin: 10px 0;
+  padding: 10px;
+}
