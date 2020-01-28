@@ -1,11 +1,11 @@
 <h2 align="center">Title: <%=@article.title%></h2>
 <div class="well col-xs-8 col-xs-offset-2">
-<h4 class="center">description:</h4>
-<hr> 
-<%= simple_format(@article.description)%>
-
-<div class="article-actions">
-<%= link_to "Back to article listing", articles_path %> |
-<%= link_to "edit article", edit_article_path(@article) %> |
-<%= link_to "delete article", article_path(@article), method: :delete, data: {confirm: "are you sure?"} %>
+  <h4 class="center">description:</h4>
+  <hr>
+  <%= simple_format(@article.description)%>
+  <div class="article-actions">
+    <%= link_to "Back to article listing", articles_path %> |
+    <%= link_to "edit article", edit_article_path(@article) %> |
+    <%= link_to "delete article", article_path(@article), method: :delete, data: {confirm: "are you sure?"} %>
+  </div>
 </div>
