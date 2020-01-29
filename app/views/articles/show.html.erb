@@ -9,3 +9,10 @@
     <%= link_to "delete article", article_path(@article), method: :delete, data: {confirm: "are you sure?"} %>
   </div>
 </div>
+<% if @article.user%>
+  <hr>
+  <h4>created by:</h4>
+  <li><%= link_to gravatar_for(@article.user), user_path(@article.user)%></li>
+  <li class="article-title"><%= link_to @article.user.username, user_path(@article.user) %></li>
+  <li><small><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %></small></li>
+<%end%>
