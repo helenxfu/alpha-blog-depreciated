@@ -37,7 +37,7 @@
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
           </li>
           <li class="nav-item">
-            <%= "Admin" if current_user.admin? %>
+            <%= "Admin" if logged_in? && current_user.admin? %>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
