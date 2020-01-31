@@ -4,9 +4,11 @@
   <hr>
   <%= simple_format(@article.description)%>
   <div class="article-actions">
-    <%= link_to "Back to article listing", articles_path %> |
-    <%= link_to "edit article", edit_article_path(@article) %> |
-    <%= link_to "delete article", article_path(@article), method: :delete, data: {confirm: "are you sure?"} %>
+    <%= link_to "Back to article listing", articles_path %>
+    <%if logged_in? && (current_user == @article.user ||current_user.admin?)%>|
+      <%= link_to "edit article", edit_article_path(@article) %> |
+      <%= link_to "delete article", article_path(@article), method: :delete, data: {confirm: "are you sure?"} %>
+    <%end%>
   </div>
 </div>
 <% if @article.user%>
