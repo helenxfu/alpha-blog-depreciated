@@ -18,6 +18,11 @@
           <%= f.text_area :description, rows: 5, class: 'form-control', placeholder: "body" %>
         </div>
       </div>
+      <div class="form-group">
+        <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+          <% cb.label(class: "checkbox_inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
+        <%end%>
+      </div>
       <%= f.submit class: 'btn btn-primary btn-large' %>
     <% end %>
   </div>
